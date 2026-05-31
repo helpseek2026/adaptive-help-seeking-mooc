@@ -79,6 +79,8 @@ The following derived datasets support the analyses in this repository:
 │   ├── multilevel_long_format.csv
 │   ├── irr_side_by_side.csv
 │   ├── irr_key_stats.txt
+│   ├── irr_author_final_side_by_side.csv
+│   ├── irr_author_final_key_stats.txt
 │   ├── dose_response_trends_results.csv
 │   ├── dose_response_trends_summary.txt
 │   ├── tertile_trends_results.csv
