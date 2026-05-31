@@ -63,7 +63,8 @@ The following derived datasets support the analyses in this repository:
 │   ├── within_group_analysis.py       Within-tertile correlations (Section 4.7.1)
 │   ├── three_category_analysis.py     KG / Other Process / Task split (Section 4.7.2)
 │   ├── multilevel_analysis.py         Mixed-effects with course as RE (Section 4.7.3)
-│   ├── compute_irr.py                 Cohen's kappa for feedback classification (Section 3.4.4)
+│   ├── compute_irr.py                 Cohen's kappa, raw five-category (Section 3.4.4)
+│   ├── compute_irr_author_final.py    Cohen's kappa, author-final mapping (Section 3.4.4; companion to compute_irr.py)
 │   ├── dose_response_trends.py        Dose-response / threshold trends (Section 4.4)
 │   ├── (user_course_accuracy.csv)         Not redistributed; input to multilevel_analysis.py; build via 01_data_extraction/ or obtain as supplementary material
 │   └── tertile_trends.py              Reproduces Table 5 (tertile trends, Section 4.5)
@@ -148,7 +149,8 @@ cd 02_analysis/
 python within_group_analysis.py     # Section 4.7.1
 python three_category_analysis.py   # Section 4.7.2
 python multilevel_analysis.py       # Section 4.7.3
-python compute_irr.py               # Section 3.4 (requires Coding_Sheet_Coder*.xlsx)
+python compute_irr.py               # Section 3.4.4 — raw five-category κ
+python compute_irr_author_final.py     # Section 3.4.4 — author-final κ
 python dose_response_trends.py      # Section 4.4
 python tertile_trends.py            # Section 4.5
 ```
@@ -168,7 +170,7 @@ The convergent finding across all the statistical robustness analyses is that th
 | Within-tertile correlation | All three tertile-internal correlations near zero (Low: *r* = +.008; Medium: *r* = +.005; High: *r* = −.018) |
 | Three-category decomposition | The aggregate correlation is concentrated in Knowledge Graph Navigation (KG: *r* = −.107; other process-level: *r* = −.013); across all feedback levels a consistent gradient emerges (Self-Regulation: *r* = +.055; Self-level: *r* = +.033; Task-level: *r* = +.097), consistent with performance-based differential selection |
 | Multilevel modelling | EF% effect on accuracy disappears (*b* = +.002, *p* = .85) once course is partialled out (*ICC* = .394) |
-| Inter-rater reliability | Cohen's κ = .716 across two independent coders, 13 of 16 features with full agreement |
+| Inter-rater reliability | Cohen's κ = .716 (raw five-category) and κ = .743 (author-final mapping, Online Resource 1 Appendix A) across two independent coders; 13 of 16 features with full agreement |
 
 ## License
 
