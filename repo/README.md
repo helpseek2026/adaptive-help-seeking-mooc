@@ -63,7 +63,7 @@ The following derived datasets support the analyses in this repository:
 │   ├── within_group_analysis.py       Within-tertile correlations (Section 4.7.1)
 │   ├── three_category_analysis.py     KG / Other Process / Task split (Section 4.7.2)
 │   ├── multilevel_analysis.py         Mixed-effects with course as RE (Section 4.7.3)
-│   ├── compute_irr.py                 Cohen's kappa for feedback classification (Section 3.4)
+│   ├── compute_irr.py                 Cohen's kappa for feedback classification (Section 3.4.4)
 │   ├── dose_response_trends.py        Dose-response / threshold trends (Section 4.4)
 │   ├── (user_course_accuracy.csv)         Not redistributed; input to multilevel_analysis.py; build via 01_data_extraction/ or obtain as supplementary material
 │   └── tertile_trends.py              Reproduces Table 5 (tertile trends, Section 4.5)
