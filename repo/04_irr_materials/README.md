@@ -6,7 +6,7 @@ The materials used for the inter-rater reliability analysis of the AI feature cl
 
 | File | Description |
 |---|---|
-| `Coding_Manual.docx` | The structured codebook, distributed to both coders before independent classification. Defines the five categories (Task / Process / Self-Regulation / Self / Other-or-Not-Applicable), provides decision rules, and includes 3 calibration items (not in the analysis set) for training |
+| `Coding_Manual.docx` | The structured codebook, distributed to both coders before independent classification. Defines the five categories (Task / Process / Self-Regulation / Self / Other-or-Not-Applicable), provides decision rules, and includes 3 calibration items (not in the analysis set) for training. Appendix A (added post-hoc) documents all author-level mapping, exclusion, and reclassification decisions used in Table 1 and downstream analyses, together with reconstructed κ statistics |
 | `Coding_Sheet_Coder1.xlsx` | Coder 1's independent ratings of the 16 distinct AI features |
 | `Coding_Sheet_Coder2.xlsx` | Coder 2's independent ratings |
 
@@ -16,11 +16,14 @@ Two graduate student coders, blind to the study hypotheses and not co-authors of
 
 Inter-rater agreement was quantified using Cohen's kappa, computed by `02_analysis/compute_irr.py`. Disagreements on three items were resolved through discussion in a structured adjudication meeting; the consensus classification is used in all reported analyses.
 
+For complete transparency on the chain from coders' five-category ratings to the four-level structure used in the downstream analyses, the post-hoc mapping decisions (five "Other" features mapped to Hattie–Timperley levels, three "Other" features excluded, and one feature reclassified from coders' consensus) are documented in `Coding_Manual.docx`, Appendix A. A second κ statistic under the author-final mapping scheme is reproduced by `02_analysis/compute_irr_author_final.py`.
+
 ## Reproducing the IRR statistics
 
 ```bash
 cd ../02_analysis/
-python compute_irr.py
+python compute_irr.py                  # raw five-category κ
+python compute_irr_author_final.py     # author-final κ
 ```
 
 The script reads `Coding_Sheet_Coder1.xlsx` and `Coding_Sheet_Coder2.xlsx` from this directory and produces:
@@ -31,7 +34,7 @@ The script reads `Coding_Sheet_Coder1.xlsx` and `Coding_Sheet_Coder2.xlsx` from 
 
 ## Coders' independence
 
-The coding sheets here are unmodified versions exactly as the coders submitted them. No post-hoc edits were made to either coder's classifications. The adjudicated final classification is reported separately in the manuscript Table 1, and is not stored in this directory (since it is the consensus classification, not the coders' independent work).
+The coding sheets here are unmodified versions exactly as the coders submitted them. No post-hoc edits were made to either coder's classifications. The adjudicated final classification is reported separately in the manuscript Table 1, and is not stored in this directory (since it is the consensus classification, not the coders' independent work). The full chain from coders' independent five-category ratings to the four-level structure used in Table 1, including all author-level decisions, is documented in `Coding_Manual.docx`, Appendix A.
 
 ## Note on language
 
