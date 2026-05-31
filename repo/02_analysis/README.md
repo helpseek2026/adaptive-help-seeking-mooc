@@ -40,6 +40,21 @@ Computes Cohen's kappa between two independent coders' classifications of the 16
 **Inputs**: `Coding_Sheet_Coder1.xlsx`, `Coding_Sheet_Coder2.xlsx` (in `../04_irr_materials/`)
 **Outputs**: `irr_side_by_side.csv`, `irr_key_stats.txt` (no figure is produced by this script; Figure 1 in the manuscript was prepared manually)
 
+### `compute_irr_author_final.py` — Section 3.4.4 (companion to compute_irr.py)
+
+Reports a second κ under the author-final classification scheme documented
+in Online Resource 1, Appendix A. The script remaps each coder's "Other"
+classifications to the closest Hattie–Timperley level per Appendix A.2,
+then recomputes κ.
+
+**Key finding**: κ (author-final, Coder 1 vs Coder 2) = .743, 95% bootstrap
+CI similar to raw. Mean κ (coders vs author-final classification) = .796.
+The author-final reliability is equal to or slightly higher than the raw
+five-category κ = .716.
+
+**Inputs**: `Coding_Sheet_Coder1.xlsx`, `Coding_Sheet_Coder2.xlsx`
+**Outputs**: `irr_author_final_side_by_side.csv`, `irr_author_final_key_stats.txt`
+
 ### `dose_response_trends.py` — Section 4.4 (RQ3)
 
 Tests linear dose-response and quadratic threshold effects of AI usage intensity on accuracy, using OLS polynomial trend regression on the seven ordered usage bands.
